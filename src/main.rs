@@ -7,7 +7,13 @@ fn main() {
     let arg3:f64 = args[3].parse().unwrap();
     let arg4:f64 = args[4].parse().unwrap();
 
-    println!("{:?}", args);
-    println!("{}, {}, {}, {}", arg1, arg2, arg3, arg4);
+    //println!("{:?}", args);
+    //println!("{}, {}, {}, {}", arg1, arg2, arg3, arg4);
 
+    println!("{}", poundstocups(arg1));
+
+}
+
+fn poundstocups(x: f64) -> f64 {
+    x * 3.3
 }
