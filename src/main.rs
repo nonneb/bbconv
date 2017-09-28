@@ -1,16 +1,22 @@
+#![feature(slice_patterns)]
+
 use std::env;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
     let arg1:f64 = args[1].parse().unwrap();
-    let arg2:f64 = args[2].parse().unwrap();
-    let arg3:f64 = args[3].parse().unwrap();
-    let arg4:f64 = args[4].parse().unwrap();
+    let arg2: &str = &args[2];
+    let arg3: &str = &args[3];
+    let arg4: &str = &args[4];
 
-    //println!("{:?}", args);
-    //println!("{}, {}, {}, {}", arg1, arg2, arg3, arg4);
-
-    println!("{}", poundstocups(arg1));
+    if arg2 == "pounds" && arg4 == "cups" {
+        println!("{} {} is {} {}", arg1, &arg2, poundstocups(arg1), &arg4);
+    } else {
+        println!("Not implemented");
+    }
+        
+    
+    
 
 }
 
