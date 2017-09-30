@@ -4,6 +4,9 @@ use std::env;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
+    if args.iter().count() < 5 {
+        println!("Please enter text in the format '50 gallons to cups.'");
+    } else {
     let arg1:f64 = args[1].parse().unwrap();
     let arg2: &str = &args[2];
     let arg3: &str = &args[3];
@@ -17,7 +20,7 @@ fn main() {
     } else {
         println!("Not implemented");
     }
-        
+    }
     
     
 
