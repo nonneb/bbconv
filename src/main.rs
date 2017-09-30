@@ -11,6 +11,9 @@ fn main() {
 
     if arg2 == "pounds" && arg4 == "cups" {
         println!("{} {} is {} {}", arg1, &arg2, poundstocups(arg1), &arg4);
+    } else if arg2 == "cups" && arg4 == "pounds" {
+        println!("{} {} is {} {}", arg1, &arg2, cupstopounds(arg1), &arg4);
+    
     } else {
         println!("Not implemented");
     }
@@ -22,4 +25,8 @@ fn main() {
 
 fn poundstocups(x: f64) -> f64 {
     x * 3.3
+}
+
+fn cupstopounds(x: f64) -> f64 {
+    x / 3.3
 }
